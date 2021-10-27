@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Typiqally.Application.Abstractions.Services;
+using Typiqally.Domain.Abstractions.Services;
 using Typiqally.Presentation.WebApi.ViewModels;
 
 namespace Typiqally.Presentation.WebApi.Controllers

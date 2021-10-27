@@ -13,7 +13,7 @@ namespace Typiqally.Domain.IoC
         {
             services.AddPersistence(configuration);
 
-            services.AddScoped<IWeatherForecastDomainService, WeatherForecastDomainService>();
+            services.AddScoped<IWeatherForecastService, WeatherForecastService>();
             
             // AutoMapper profiles
             services.AddAutoMapper(config =>

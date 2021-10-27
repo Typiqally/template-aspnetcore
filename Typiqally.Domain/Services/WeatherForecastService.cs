@@ -8,12 +8,12 @@ using Typiqally.Persistence.Abstractions.Repositories;
 
 namespace Typiqally.Domain.Services
 {
-    public class WeatherForecastDomainService : IWeatherForecastDomainService
+    public class WeatherForecastService : IWeatherForecastService
     {
         private readonly IMapper _mapper;
         private readonly IWeatherForecastRepository _repository;
 
-        public WeatherForecastDomainService(IMapper mapper, IWeatherForecastRepository repository)
+        public WeatherForecastService(IMapper mapper, IWeatherForecastRepository repository)
         {
             _mapper = mapper;
             _repository = repository;

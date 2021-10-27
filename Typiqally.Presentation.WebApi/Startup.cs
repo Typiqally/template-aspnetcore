@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Typiqally.Application.IoC;
+using Typiqally.Domain.IoC;
 using Typiqally.Presentation.WebApi.Profiles;
 
 namespace Typiqally.Presentation.WebApi
@@ -21,6 +21,8 @@ namespace Typiqally.Presentation.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDomain(Configuration);
+            
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "Typiqally.Presentation.WebApi", Version = "v1"}); });
 
@@ -28,8 +30,6 @@ namespace Typiqally.Presentation.WebApi
             {
                 config.AddProfile<WeatherForecastViewModelMappingProfile>();
             });
-            
-            services.AddApplication(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

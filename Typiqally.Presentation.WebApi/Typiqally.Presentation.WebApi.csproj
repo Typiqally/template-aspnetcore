@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Typiqally.Application.IoC\Typiqally.Application.IoC.csproj" />
+      <ProjectReference Include="..\Typiqally.Domain.IoC\Typiqally.Domain.IoC.csproj" />
     </ItemGroup>
 
 </Project>

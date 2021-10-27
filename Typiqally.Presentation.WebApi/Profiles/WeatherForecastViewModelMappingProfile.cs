@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Typiqally.Application.Abstractions.Dtos;
+using Typiqally.Domain.Abstractions.Models;
 using Typiqally.Presentation.WebApi.ViewModels;
 
 namespace Typiqally.Presentation.WebApi.Profiles
@@ -8,8 +8,8 @@ namespace Typiqally.Presentation.WebApi.Profiles
     {
         public WeatherForecastViewModelMappingProfile()
         {
-            CreateMap<WeatherForecastViewModel, WeatherForecastDto>();
-            CreateMap<WeatherForecastDto, WeatherForecastViewModel>();
+            CreateMap<WeatherForecastViewModel, WeatherForecast>();
+            CreateMap<WeatherForecast, WeatherForecastViewModel>();
         }
     }
 }
