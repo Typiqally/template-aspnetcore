@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Typiqally.Application.Abstractions\Typiqally.Application.Abstractions.csproj" />
+      <ProjectReference Include="..\Typiqally.Domain.Abstractions\Typiqally.Domain.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>
