@@ -5,14 +5,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="10.1.1" />
-      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Include="AutoMapper" Version="10.1.1"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Typiqally.Domain.Abstractions\Typiqally.Domain.Abstractions.csproj" />
-      <ProjectReference Include="..\Typiqally.Persistence.Abstractions\Typiqally.Persistence.Abstractions.csproj" />
+        <ProjectReference Include="..\Typiqally.Domain.Abstractions\Typiqally.Domain.Abstractions.csproj"/>
+        <ProjectReference Include="..\Typiqally.Persistence.Abstractions\Typiqally.Persistence.Abstractions.csproj"/>
     </ItemGroup>
 
 </Project>

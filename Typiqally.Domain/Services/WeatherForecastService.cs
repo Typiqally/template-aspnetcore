@@ -8,28 +8,28 @@ using Typiqally.Persistence.Abstractions.Repositories;
 
 namespace Typiqally.Domain.Services
 {
-    public class WeatherForecastService : IWeatherForecastService
-    {
-        private readonly IMapper _mapper;
-        private readonly IWeatherForecastRepository _repository;
+	public class WeatherForecastService : IWeatherForecastService
+	{
+		private readonly IMapper _mapper;
+		private readonly IWeatherForecastRepository _repository;
 
-        public WeatherForecastService(IMapper mapper, IWeatherForecastRepository repository)
-        {
-            _mapper = mapper;
-            _repository = repository;
-        }
+		public WeatherForecastService(IMapper mapper, IWeatherForecastRepository repository)
+		{
+			_mapper = mapper;
+			_repository = repository;
+		}
 
-        public async Task<IEnumerable<WeatherForecast>> GetLatestForecastsAsync()
-        {
-            var latestForecasts = await _repository.ToListAsync(
-                null,
-                forecasts => forecasts.OrderByDescending(x => x.Date),
-                null,
-                null,
-                5
-            );
+		public async Task<IEnumerable<WeatherForecast>> GetLatestForecastsAsync()
+		{
+			var latestForecasts = await _repository.ToListAsync(
+				null,
+				forecasts => forecasts.OrderByDescending(x => x.Date),
+				null,
+				null,
+				5
+			);
 
-            return _mapper.Map<IEnumerable<WeatherForecast>>(latestForecasts);
-        }
-    }
+			return _mapper.Map<IEnumerable<WeatherForecast>>(latestForecasts);
+		}
+	}
 }

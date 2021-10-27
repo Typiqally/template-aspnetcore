@@ -7,21 +7,18 @@ using Typiqally.Persistence.IoC;
 
 namespace Typiqally.Domain.IoC
 {
-    public static class DomainServiceCollectionExtensions
-    {
-        public static IServiceCollection AddDomain(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddPersistence(configuration);
+	public static class DomainServiceCollectionExtensions
+	{
+		public static IServiceCollection AddDomain(this IServiceCollection services, IConfiguration configuration)
+		{
+			services.AddPersistence(configuration);
 
-            services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-            
-            // AutoMapper profiles
-            services.AddAutoMapper(config =>
-            {
-                config.AddProfile<WeatherForecastMappingProfile>();
-            });
+			services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
-            return services;
-        }
-    }
+			// AutoMapper profiles
+			services.AddAutoMapper(config => { config.AddProfile<WeatherForecastMappingProfile>(); });
+
+			return services;
+		}
+	}
 }

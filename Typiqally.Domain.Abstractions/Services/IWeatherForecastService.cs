@@ -4,8 +4,8 @@ using Typiqally.Domain.Abstractions.Models;
 
 namespace Typiqally.Domain.Abstractions.Services
 {
-    public interface IWeatherForecastService
-    {
-        Task<IEnumerable<WeatherForecast>> GetLatestForecastsAsync();
-    }
+	public interface IWeatherForecastService
+	{
+		Task<IEnumerable<WeatherForecast>> GetLatestForecastsAsync();
+	}
 }

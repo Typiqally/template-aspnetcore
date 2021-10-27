@@ -5,11 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Typiqally.Domain.Abstractions\Typiqally.Domain.Abstractions.csproj" />
+        <ProjectReference Include="..\Typiqally.Domain.Abstractions\Typiqally.Domain.Abstractions.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5"/>
     </ItemGroup>
 
 </Project>

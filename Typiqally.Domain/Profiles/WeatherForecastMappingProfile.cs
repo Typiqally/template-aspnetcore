@@ -4,12 +4,12 @@ using Typiqally.Persistence.Abstractions.Entities;
 
 namespace Typiqally.Domain.Profiles
 {
-    public class WeatherForecastMappingProfile : Profile
-    {
-        public WeatherForecastMappingProfile()
-        {
-            CreateMap<WeatherForecast, WeatherForecastEntity>();
-            CreateMap<WeatherForecastEntity, WeatherForecast>();
-        }
-    }
+	public class WeatherForecastMappingProfile : Profile
+	{
+		public WeatherForecastMappingProfile()
+		{
+			CreateMap<WeatherForecast, WeatherForecastEntity>();
+			CreateMap<WeatherForecastEntity, WeatherForecast>();
+		}
+	}
 }
